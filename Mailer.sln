@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailer.Services", "Mailer.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailer.Repositories", "Mailer.Repositories\Mailer.Repositories.csproj", "{70D75497-21BE-415B-BCCC-C23807EE9E3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailer.Services.ClickATell", "Mailer.Services.ClickATell\Mailer.Services.ClickATell.csproj", "{65C07CDE-B8BA-43C5-88E5-CC27B26E1BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailer.NewYearsMailer", "Mailer.NewYearsMailer\Mailer.NewYearsMailer.csproj", "{ECB5BB64-A93B-4FE4-BE6F-40CDC5548867}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{70D75497-21BE-415B-BCCC-C23807EE9E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70D75497-21BE-415B-BCCC-C23807EE9E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70D75497-21BE-415B-BCCC-C23807EE9E3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C07CDE-B8BA-43C5-88E5-CC27B26E1BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C07CDE-B8BA-43C5-88E5-CC27B26E1BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C07CDE-B8BA-43C5-88E5-CC27B26E1BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C07CDE-B8BA-43C5-88E5-CC27B26E1BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB5BB64-A93B-4FE4-BE6F-40CDC5548867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB5BB64-A93B-4FE4-BE6F-40CDC5548867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB5BB64-A93B-4FE4-BE6F-40CDC5548867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB5BB64-A93B-4FE4-BE6F-40CDC5548867}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
