@@ -10,9 +10,12 @@ namespace Mailer.Repositories.Google
     public class GoogleGroupsRepository : IGroupsRepository
     {
         private readonly RequestSettings _settings;
-        public GoogleGroupsRepository(string applicationName, string email, string password)
+        public GoogleGroupsRepository(GoogleAccountCredentials credentials)
         {
-            _settings = new RequestSettings(applicationName, email, password) { AutoPaging = true };
+            _settings = new RequestSettings(credentials.ApplicationName, credentials.Username, credentials.Password)
+                            {
+                                AutoPaging = true
+                            };
         }
 
         public List<Group> GetAll()

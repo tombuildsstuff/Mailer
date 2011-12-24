@@ -11,9 +11,12 @@ namespace Mailer.Repositories.Google
     public class GoogleContactsRepository : IContactsRepository
     {
         private readonly RequestSettings _settings;
-        public GoogleContactsRepository(string applicationName, string email, string password)
+        public GoogleContactsRepository(GoogleAccountCredentials credentials)
         {
-            _settings = new RequestSettings(applicationName, email, password) { AutoPaging = true };
+            _settings = new RequestSettings(credentials.ApplicationName, credentials.Username, credentials.Password)
+                            {
+                                AutoPaging = true
+                            };
         }
 
         public IEnumerable<Contact> GetAllInGroup(string groupId)
