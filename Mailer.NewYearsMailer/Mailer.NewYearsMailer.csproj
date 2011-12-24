@@ -42,6 +42,10 @@
       <Project>{7B0D93EA-8864-41BE-8F3D-B587659A11E0}</Project>
       <Name>Mailer.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Mailer.Repositories.Google\Mailer.Repositories.Google.csproj">
+      <Project>{CB48E7A4-4A86-4158-A683-BB2BC823A483}</Project>
+      <Name>Mailer.Repositories.Google</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mailer.Repositories.LocalFileSystem\Mailer.Repositories.LocalFileSystem.csproj">
       <Project>{2AB5A1C4-89B2-4654-9E4C-55458E58D90F}</Project>
       <Name>Mailer.Repositories.LocalFileSystem</Name>

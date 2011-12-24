@@ -14,6 +14,16 @@ namespace Mailer.Repositories.LocalFileSystem
             _filePath = filePath;
         }
 
+        public IEnumerable<Contact> GetAllInGroup(string groupId)
+        {
+            return GetAll(); // we don't have a definition for groups in this context
+        }
+
+        public IEnumerable<Contact> GetAllInGroups(IEnumerable<string> groupIds)
+        {
+            return GetAll(); // we don't have a definition for groups in this context
+        }
+
         public IEnumerable<Contact> GetAll()
         {
             var lines = File.ReadAllLines(_filePath);
