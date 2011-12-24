@@ -4,8 +4,9 @@ namespace Mailer.Repositories.Google
 {
     public class GoogleContactsConfiguration : AbstractContactsConfiguration
     {
-        public GoogleContactsConfiguration()
+        public GoogleContactsConfiguration(string applicationName)
         {
+            ApplicationName = applicationName;
             Username = ConfigurationManager.AppSettings["GoogleUsername"];
             Password = ConfigurationManager.AppSettings["GooglePassword"];
             MaleMessage = ConfigurationManager.AppSettings["MaleTextMessage"];

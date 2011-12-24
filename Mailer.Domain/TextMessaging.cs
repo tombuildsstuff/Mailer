@@ -21,13 +21,16 @@ namespace Mailer.Domain
 
         public bool SendTextMessageToContact(Contact contact, string message)
         {
-            try {
+            try
+            {
                 var number = DetermineMobileNumber(contact.MobileNumber);
                 var text = SwapOutPhrases(contact, message);
                 var textMessage = new TextMessage(number, text);
                 _textingService.Send(textMessage);
                 return true;
-            } catch (InvalidOperationException) {
+            }
+            catch (InvalidOperationException)
+            {
                 return false;
             }
         }

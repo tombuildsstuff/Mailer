@@ -56,6 +56,8 @@ namespace Mailer.Repositories.Google
                 Surname = googleContact.ContactEntry.Name.FamilyName,
             };
 
+            contact.MobileNumber = DetermineMobileNumber(googleContact);
+
             DateTime date;
             if (DateTime.TryParse(googleContact.ContactEntry.Birthday, out date))
                 contact.DateOfBirth = date;
@@ -65,6 +67,15 @@ namespace Mailer.Repositories.Google
                 contact.Gender = gender.Href.StartsWith("F", StringComparison.InvariantCultureIgnoreCase) ? Contact.Sex.Female : Contact.Sex.Male;
 
             return contact;
+        }
+
+        private static string DetermineMobileNumber(GoogleContact googleContact)
+        {
+            if (googleContact.Phonenumbers.Count == 0)
+                return null;
+
+            var numbers = googleContact.Phonenumbers.Where(p => p.Value.StartsWith("07") || p.Value.StartsWith("+447")).ToList();
+            return numbers.Count > 0 ? numbers.FirstOrDefault().Value : null;
         }
     }
 }

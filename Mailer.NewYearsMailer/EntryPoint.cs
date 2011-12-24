@@ -13,11 +13,11 @@ namespace Mailer.NewYearsMailer
         public static void Main(string[] args)
         {
             var container = new StandardKernel();
-            container.Bind<AbstractContactsConfiguration>().ToConstant(new GoogleContactsConfiguration());
+            container.Bind<AbstractContactsConfiguration>().ToConstant(new GoogleContactsConfiguration("New Years Mailer"));
             container.Bind<AbstractTextMessagingConfiguration>().ToConstant(new ClickATellTextMessagingConfiguration());
+            container.Bind<AbstractTextMessagingConfiguration>().To<ClickATellTextMessagingConfiguration>();
             container.Bind<IContactsRepository>().To<GoogleContactsRepository>();
             container.Bind<IGroupsRepository>().To<GoogleGroupsRepository>();
-            container.Bind<AbstractTextMessagingConfiguration>().To<ClickATellTextMessagingConfiguration>();
 
             // TODO: logging
             // BUG: proper services
