@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{ECB5BB64-A93B-4FE4-BE6F-40CDC5548867}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{2AB5A1C4-89B2-4654-9E4C-55458E58D90F}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mailer.NewYearsMailer</RootNamespace>
-    <AssemblyName>Mailer.NewYearsMailer</AssemblyName>
+    <RootNamespace>Mailer.Repositories.LocalFileSystem</RootNamespace>
+    <AssemblyName>Mailer.Repositories.LocalFileSystem</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,11 +30,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Mailer.NewYearsMailer.EntryPoint</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="EntryPoint.cs" />
+    <Compile Include="LocalFileSystemContactsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -42,25 +39,10 @@
       <Project>{7B0D93EA-8864-41BE-8F3D-B587659A11E0}</Project>
       <Name>Mailer.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Mailer.Repositories.LocalFileSystem\Mailer.Repositories.LocalFileSystem.csproj">
-      <Project>{2AB5A1C4-89B2-4654-9E4C-55458E58D90F}</Project>
-      <Name>Mailer.Repositories.LocalFileSystem</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Mailer.Repositories\Mailer.Repositories.csproj">
       <Project>{70D75497-21BE-415B-BCCC-C23807EE9E3E}</Project>
       <Name>Mailer.Repositories</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Mailer.Services.ClickATell\Mailer.Services.ClickATell.csproj">
-      <Project>{65C07CDE-B8BA-43C5-88E5-CC27B26E1BC0}</Project>
-      <Name>Mailer.Services.ClickATell</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Mailer.Services\Mailer.Services.csproj">
-      <Project>{677D4CDC-3CEC-4820-94ED-8425629E5A9F}</Project>
-      <Name>Mailer.Services</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
