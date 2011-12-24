@@ -1,18 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 
 namespace Mailer.Repositories.Google
 {
-    public class GoogleContactsConfiguration
+    public class GoogleContactsConfiguration : AbstractContactsConfiguration
     {
-        public string GoogleUsername { get { return ConfigurationManager.AppSettings["GoogleUsername"]; } }
-
-        public string GooglePassword { get { return ConfigurationManager.AppSettings["GooglePassword"]; } }
-
-        public string MaleTextMessage { get { return ConfigurationManager.AppSettings["MaleTextMessage"]; } }
-
-        public string FemaleTextMessage { get { return ConfigurationManager.AppSettings["FemaleTextMessage"]; } }
-
-        public IEnumerable<string> GroupsToMessage { get { return ConfigurationManager.AppSettings["GroupsToMessage"].Split(','); } }
+        public GoogleContactsConfiguration()
+        {
+            Username = ConfigurationManager.AppSettings["GoogleUsername"];
+            Password = ConfigurationManager.AppSettings["GooglePassword"];
+            MaleMessage = ConfigurationManager.AppSettings["MaleTextMessage"];
+            FemaleMessage = ConfigurationManager.AppSettings["FemaleTextMessage"];
+            GroupsToMessage = ConfigurationManager.AppSettings["GroupsToMessage"].Split(',');
+        }
     }
 }

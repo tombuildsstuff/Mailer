@@ -11,7 +11,7 @@ namespace Mailer.Repositories.Google
     public class GoogleContactsRepository : IContactsRepository
     {
         private readonly RequestSettings _settings;
-        public GoogleContactsRepository(GoogleAccountCredentials credentials)
+        public GoogleContactsRepository(AbstractContactsConfiguration credentials)
         {
             _settings = new RequestSettings(credentials.ApplicationName, credentials.Username, credentials.Password)
                             {

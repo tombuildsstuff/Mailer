@@ -1,8 +1,10 @@
 ﻿using System;
-using System.Linq;
-using Mailer.Entities;
+using Mailer.Nullables;
+using Mailer.Repositories;
 using Mailer.Repositories.Google;
+using Mailer.Services;
 using Mailer.Services.ClickATell;
+using Ninject;
 
 namespace Mailer.NewYearsMailer
 {
@@ -10,18 +12,20 @@ namespace Mailer.NewYearsMailer
     {
         public static void Main(string[] args)
         {
-            var googleCredentials = new GoogleContactsConfiguration();
-            //var repository = new LocalFileSystemContactsRepository("C:\\Development\\Contacts.csv");
-            var credentials = new GoogleAccountCredentials("New Years Mailer", googleCredentials.GoogleUsername, googleCredentials.GooglePassword);
-            var contactsRepository = new GoogleContactsRepository(credentials);
-            var groupsRepository = new GoogleGroupsRepository(credentials);
-            var groupId = groupsRepository.GetAll().Where(g => g.Name == "Friends").FirstOrDefault().Id;
-            var contacts = contactsRepository.GetAllInGroup(groupId);
-            foreach (var contact in contacts)
-            {
-                Console.WriteLine(contact.FullName);
-            }
-            Console.ReadLine();
+            var container = new StandardKernel();
+            container.Bind<AbstractContactsConfiguration>().ToConstant(new GoogleContactsConfiguration());
+            container.Bind<AbstractTextMessagingConfiguration>().ToConstant(new ClickATellTextMessagingConfiguration());
+            container.Bind<IContactsRepository>().To<GoogleContactsRepository>();
+            container.Bind<IGroupsRepository>().To<GoogleGroupsRepository>();
+            container.Bind<AbstractTextMessagingConfiguration>().To<ClickATellTextMessagingConfiguration>();
+
+            // TODO: logging
+            // BUG: proper services
+            container.Bind<ITextMessagingService>().To<NullTextMessagingService>();
+
+            var mailer = container.Get<NewYearsMailer>();
+            mailer.GoGoNewYearsMailer();
+            Console.WriteLine();
         }
     }
 }

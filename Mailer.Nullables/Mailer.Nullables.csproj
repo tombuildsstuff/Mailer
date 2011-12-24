@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{70D75497-21BE-415B-BCCC-C23807EE9E3E}</ProjectGuid>
+    <ProjectGuid>{B5EA9AC6-5BE6-4577-A978-543A97061077}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mailer.Repositories</RootNamespace>
-    <AssemblyName>Mailer.Repositories</AssemblyName>
+    <RootNamespace>Mailer.Nullables</RootNamespace>
+    <AssemblyName>Mailer.Nullables</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AbstractContactsConfiguration.cs" />
-    <Compile Include="IContactsRepository.cs" />
-    <Compile Include="IGroupsRepository.cs" />
+    <Compile Include="NullTextMessagingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -41,9 +39,10 @@
       <Project>{7B0D93EA-8864-41BE-8F3D-B587659A11E0}</Project>
       <Name>Mailer.Entities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System" />
+    <ProjectReference Include="..\Mailer.Services\Mailer.Services.csproj">
+      <Project>{677D4CDC-3CEC-4820-94ED-8425629E5A9F}</Project>
+      <Name>Mailer.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

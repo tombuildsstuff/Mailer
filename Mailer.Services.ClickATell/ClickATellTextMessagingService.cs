@@ -11,7 +11,7 @@ namespace Mailer.Services.ClickATell
         private readonly string _password;
         private readonly int _apiId;
         private readonly string _sender;
-        public ClickATellTextMessagingService(ClickATellTextMessagingConfiguration config)
+        public ClickATellTextMessagingService(AbstractTextMessagingConfiguration config)
         {
             _user = config.Username;
             _password = config.Password;

@@ -31,7 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="GoogleAccountCredentials.cs" />
     <Compile Include="GoogleContactsConfiguration.cs" />
     <Compile Include="GoogleContactsRepository.cs" />
     <Compile Include="GoogleGroupsRepository.cs" />

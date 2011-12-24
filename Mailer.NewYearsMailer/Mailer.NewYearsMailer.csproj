@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
+    <Compile Include="NewYearsMailer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +46,10 @@
     <ProjectReference Include="..\Mailer.Entities\Mailer.Entities.csproj">
       <Project>{7B0D93EA-8864-41BE-8F3D-B587659A11E0}</Project>
       <Name>Mailer.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mailer.Nullables\Mailer.Nullables.csproj">
+      <Project>{B5EA9AC6-5BE6-4577-A978-543A97061077}</Project>
+      <Name>Mailer.Nullables</Name>
     </ProjectReference>
     <ProjectReference Include="..\Mailer.Repositories.Google\Mailer.Repositories.Google.csproj">
       <Project>{CB48E7A4-4A86-4158-A683-BB2BC823A483}</Project>
@@ -69,6 +74,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.11\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

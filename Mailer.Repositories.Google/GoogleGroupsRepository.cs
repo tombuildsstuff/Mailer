@@ -10,7 +10,7 @@ namespace Mailer.Repositories.Google
     public class GoogleGroupsRepository : IGroupsRepository
     {
         private readonly RequestSettings _settings;
-        public GoogleGroupsRepository(GoogleAccountCredentials credentials)
+        public GoogleGroupsRepository(AbstractContactsConfiguration credentials)
         {
             _settings = new RequestSettings(credentials.ApplicationName, credentials.Username, credentials.Password)
                             {

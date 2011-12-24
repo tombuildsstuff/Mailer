@@ -2,14 +2,14 @@
 
 namespace Mailer.Services.ClickATell
 {
-    public class ClickATellTextMessagingConfiguration
+    public class ClickATellTextMessagingConfiguration : AbstractTextMessagingConfiguration
     {
-        public string Username { get { return ConfigurationManager.AppSettings["ClickATellUser"]; } }
-
-        public string Password { get { return ConfigurationManager.AppSettings["ClickATellPass"]; } }
-
-        public int ApiId { get { return int.Parse(ConfigurationManager.AppSettings["ClickATellApiId"]); } }
-
-        public string Sender { get { return ConfigurationManager.AppSettings["ClickATellSender"]; } }
+        public ClickATellTextMessagingConfiguration()
+        {
+            Username = ConfigurationManager.AppSettings["ClickATellUser"];
+            Password = ConfigurationManager.AppSettings["ClickATellPass"];
+            ApiId = int.Parse(ConfigurationManager.AppSettings["ClickATellApiId"]);
+            Sender = ConfigurationManager.AppSettings["ClickATellSender"];
+        }
     }
 }
