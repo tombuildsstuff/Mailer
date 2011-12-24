@@ -12,5 +12,11 @@
                    !string.IsNullOrWhiteSpace(Message) &&
                    160 > Message.Length;
         }
+
+        public TextMessage(string number, string message)
+        {
+            Number = number;
+            Message = message;
+        }
     }
 }

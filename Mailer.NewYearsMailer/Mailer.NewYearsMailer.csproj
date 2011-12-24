@@ -38,6 +38,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Mailer.Domain\Mailer.Domain.csproj">
+      <Project>{550710AE-37ED-4925-B638-5F55D8AC651F}</Project>
+      <Name>Mailer.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mailer.Entities\Mailer.Entities.csproj">
       <Project>{7B0D93EA-8864-41BE-8F3D-B587659A11E0}</Project>
       <Name>Mailer.Entities</Name>

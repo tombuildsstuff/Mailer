@@ -13,7 +13,7 @@ namespace Mailer.Tests.Domain
         public void TextMessaging_DoesReportError_WhenFailedSending()
         {
             var service = new TextMessaging(new FakeTextMessagingService(false));
-            Assert.False(service.SendTextMessageToContact(new Contact(), ""));
+            Assert.False(service.SendTextMessageToContact(new Contact(), "message"));
         }
 
         [Test]

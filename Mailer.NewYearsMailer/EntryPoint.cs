@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
+using Mailer.Entities;
 using Mailer.Repositories.Google;
+using Mailer.Services.ClickATell;
 
 namespace Mailer.NewYearsMailer
 {
