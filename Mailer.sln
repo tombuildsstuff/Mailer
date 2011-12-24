@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailer.Repositories.LocalFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailer.Repositories.Google", "Mailer.Repositories.Google\Mailer.Repositories.Google.csproj", "{CB48E7A4-4A86-4158-A683-BB2BC823A483}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailer.Domain", "Mailer.Domain\Mailer.Domain.csproj", "{550710AE-37ED-4925-B638-5F55D8AC651F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailer.Tests", "Mailer.Tests\Mailer.Tests.csproj", "{AEDB7D4D-D070-4F22-8095-B007541FF53B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{CB48E7A4-4A86-4158-A683-BB2BC823A483}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB48E7A4-4A86-4158-A683-BB2BC823A483}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB48E7A4-4A86-4158-A683-BB2BC823A483}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550710AE-37ED-4925-B638-5F55D8AC651F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550710AE-37ED-4925-B638-5F55D8AC651F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550710AE-37ED-4925-B638-5F55D8AC651F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550710AE-37ED-4925-B638-5F55D8AC651F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEDB7D4D-D070-4F22-8095-B007541FF53B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEDB7D4D-D070-4F22-8095-B007541FF53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEDB7D4D-D070-4F22-8095-B007541FF53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEDB7D4D-D070-4F22-8095-B007541FF53B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
