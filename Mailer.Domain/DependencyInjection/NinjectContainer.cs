@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using Mailer.Fakes.Nullables;
 using Mailer.Repositories;
 using Mailer.Repositories.Google;
 using Mailer.Services;
@@ -20,9 +19,7 @@ namespace Mailer.Domain.DependencyInjection
             container.Bind<AbstractTextMessagingConfiguration>().To<ClickATellTextMessagingConfiguration>();
             container.Bind<IContactsRepository>().To<GoogleContactsRepository>();
             container.Bind<IGroupsRepository>().To<GoogleGroupsRepository>();
-
-            // BUG: proper services
-            container.Bind<ITextMessagingService>().To<NullTextMessagingService>();
+            container.Bind<ITextMessagingService>().To<ClickATellTextMessagingService>();
 
             return container;
         }
