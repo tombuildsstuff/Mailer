@@ -16,7 +16,6 @@ namespace Mailer.Domain.DependencyInjection
             container.Bind<ILog>().ToConstant(LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType));
             container.Bind<AbstractContactsConfiguration>().ToConstant(new GoogleContactsConfiguration(applicationName));
             container.Bind<AbstractTextMessagingConfiguration>().ToConstant(new ClickATellTextMessagingConfiguration());
-            container.Bind<AbstractTextMessagingConfiguration>().To<ClickATellTextMessagingConfiguration>();
             container.Bind<IContactsRepository>().To<GoogleContactsRepository>();
             container.Bind<IGroupsRepository>().To<GoogleGroupsRepository>();
             container.Bind<ITextMessagingService>().To<ClickATellTextMessagingService>();

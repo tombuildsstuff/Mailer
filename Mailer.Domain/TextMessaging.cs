@@ -47,6 +47,7 @@ namespace Mailer.Domain
         public static string SwapOutPhrases(Contact contact, string input)
         {
             return input.Trim()
+                        .Replace("[linebreak]", "\n") // looks silly, but AppSettings is wrong..
                         .Replace("[forename]", contact.Forename)
                         .Replace("[surname]", contact.Surname)
                         .Replace("[fullname]", contact.FullName)
