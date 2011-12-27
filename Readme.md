@@ -1,5 +1,6 @@
 The Mailer Suite
 =============
+By Tom Harvey - [@tombuildsstuff](http://twitter.com/tombuildsstuff) - [ibuildstuff.co.uk](http://ibuildstuff.co.uk)
 
 The Mailer Suite is a set of applications used to send personalised messages to your contacts.
 
