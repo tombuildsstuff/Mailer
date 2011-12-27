@@ -47,7 +47,7 @@ namespace Mailer.Domain.Mailers
         public List<Contact> GetContactsWithBirthdaysToday(List<Contact> contacts)
         {
             var today = DateTime.Now.ToStartOfDay();
-            return contacts.Where(c => c.DateOfBirth.HasValue && c.DateOfBirth.Value.ToStartOfDay() == today).ToList();
+            return contacts.Where(c => c.DateOfBirth.HasValue && c.DateOfBirth.Value.Month == today.Month && c.DateOfBirth.Value.Day == today.Day).ToList();
         }
     }
 }
