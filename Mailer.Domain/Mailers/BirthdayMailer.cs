@@ -36,8 +36,10 @@ namespace Mailer.Domain.Mailers
                                           .Select(g => g.Id)
                                           .ToList();
             var contacts = GetContactsWithBirthdaysToday(_contactsRepository.GetAllInGroups(groups).ToList());
-            var sender = new TextMessaging(_textMessagingService);
+            if (contacts.Count == 0) // no birthdays? aww man!
+                return;
 
+            var sender = new TextMessaging(_textMessagingService);
             SendToMales(sender, contacts, _contactsConfiguration.MaleMessage);
             SendToFemales(sender, contacts, _contactsConfiguration.FemaleMessage);
         }
