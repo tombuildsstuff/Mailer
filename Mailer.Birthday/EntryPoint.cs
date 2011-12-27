@@ -1,9 +1,10 @@
 ﻿using System;
 using Mailer.Domain.DependencyInjection;
 using Mailer.Domain.Helpers;
+using Mailer.Domain.Mailers;
 using Ninject;
 
-namespace Mailer.NewYearsMailer
+namespace Mailer.Birthday
 {
     public class EntryPoint
     {
@@ -11,8 +12,8 @@ namespace Mailer.NewYearsMailer
         {
             try
             {
-                var container = NinjectContainer.GetContainer("New Years Mailer");
-                var mailer = container.Get<Domain.Mailers.NewYearsMailer>();
+                var container = NinjectContainer.GetContainer("Birthday Mailer");
+                var mailer = container.Get<BirthdayMailer>();
                 mailer.GoGoGo();
             }
             catch (Exception ex)

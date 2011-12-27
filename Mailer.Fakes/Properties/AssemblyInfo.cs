@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Mailer.Nullables")]
+[assembly: AssemblyTitle("Mailer.Fakes")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Mailer.Nullables")]
+[assembly: AssemblyProduct("Mailer.Fakes")]
 [assembly: AssemblyCopyright("Copyright ©  2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f1b342a3-465f-4c1a-80b0-0d6084b89cf3")]
+[assembly: Guid("1178fa66-83df-4cb8-a0a3-c65ab6cc18b8")]
 
 // Version information for an assembly consists of the following four values:
 //

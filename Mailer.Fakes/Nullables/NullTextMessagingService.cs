@@ -1,7 +1,7 @@
-﻿using Mailer.Entities;
+using Mailer.Entities;
 using Mailer.Services;
 
-namespace Mailer.Nullables
+namespace Mailer.Fakes.Nullables
 {
     public class NullTextMessagingService : ITextMessagingService
     {

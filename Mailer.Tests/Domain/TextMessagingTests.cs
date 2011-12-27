@@ -1,7 +1,7 @@
 ﻿using System;
 using Mailer.Domain;
 using Mailer.Entities;
-using Mailer.Tests.Fakes;
+using Mailer.Fakes.Services;
 using NUnit.Framework;
 
 namespace Mailer.Tests.Domain

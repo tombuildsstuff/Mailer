@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using Mailer.Entities;
 using Mailer.Services;
 
-namespace Mailer.Tests.Fakes
+namespace Mailer.Fakes.Services
 {
     public class FakeTextMessagingService : ITextMessagingService
     {

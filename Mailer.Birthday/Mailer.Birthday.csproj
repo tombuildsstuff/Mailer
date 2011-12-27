@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{AEDB7D4D-D070-4F22-8095-B007541FF53B}</ProjectGuid>
+    <ProjectGuid>{6290B841-BBF3-40B1-8CC3-F39879E19748}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mailer.Tests</RootNamespace>
-    <AssemblyName>Mailer.Tests</AssemblyName>
+    <RootNamespace>Mailer.Birthday</RootNamespace>
+    <AssemblyName>Mailer.Birthday</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,31 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Domain\TextMessagingTests.cs" />
-    <Compile Include="Mailers\BirthdayMailerTests.cs" />
-    <Compile Include="Mailers\NewYearsMailerTests.cs" />
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="FluentAssertions">
-      <HintPath>..\packages\FluentAssertions.1.6.0\Lib\net40\FluentAssertions.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.1.2.11\lib\net40-full\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.mocks">
-      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll</HintPath>
-    </Reference>
-    <Reference Include="pnunit.framework">
-      <HintPath>..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mailer.Domain\Mailer.Domain.csproj">
@@ -65,10 +42,6 @@
     <ProjectReference Include="..\Mailer.Entities\Mailer.Entities.csproj">
       <Project>{7B0D93EA-8864-41BE-8F3D-B587659A11E0}</Project>
       <Name>Mailer.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Mailer.Fakes\Mailer.Fakes.csproj">
-      <Project>{B0F5A461-0B80-433E-9051-BFCA51E2D2A2}</Project>
-      <Name>Mailer.Fakes</Name>
     </ProjectReference>
     <ProjectReference Include="..\Mailer.Repositories\Mailer.Repositories.csproj">
       <Project>{70D75497-21BE-415B-BCCC-C23807EE9E3E}</Project>
@@ -80,7 +53,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Fakes\" />
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

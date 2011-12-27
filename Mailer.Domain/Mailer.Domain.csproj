@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Helpers\DateTimeHelpers.cs" />
+    <Compile Include="Helpers\ExceptionHelpers.cs" />
+    <Compile Include="Mailers\BirthdayMailer.cs" />
+    <Compile Include="DependencyInjection\NinjectContainer.cs" />
+    <Compile Include="Mailers\AbstractMailer.cs" />
+    <Compile Include="Mailers\NewYearsMailer.cs" />
     <Compile Include="TextMessaging.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -39,15 +45,40 @@
       <Project>{7B0D93EA-8864-41BE-8F3D-B587659A11E0}</Project>
       <Name>Mailer.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Mailer.Fakes\Mailer.Fakes.csproj">
+      <Project>{B0F5A461-0B80-433E-9051-BFCA51E2D2A2}</Project>
+      <Name>Mailer.Fakes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mailer.Repositories.Google\Mailer.Repositories.Google.csproj">
+      <Project>{CB48E7A4-4A86-4158-A683-BB2BC823A483}</Project>
+      <Name>Mailer.Repositories.Google</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mailer.Repositories\Mailer.Repositories.csproj">
       <Project>{70D75497-21BE-415B-BCCC-C23807EE9E3E}</Project>
       <Name>Mailer.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mailer.Services.ClickATell\Mailer.Services.ClickATell.csproj">
+      <Project>{65C07CDE-B8BA-43C5-88E5-CC27B26E1BC0}</Project>
+      <Name>Mailer.Services.ClickATell</Name>
     </ProjectReference>
     <ProjectReference Include="..\Mailer.Services\Mailer.Services.csproj">
       <Project>{677D4CDC-3CEC-4820-94ED-8425629E5A9F}</Project>
       <Name>Mailer.Services</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.11\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
