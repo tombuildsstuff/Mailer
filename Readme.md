@@ -13,3 +13,7 @@ To Do
 -------
 
 See here: [Issues](http://github.com/tombuildsstuff/Mailer/issues)
+
+License
+-------
+See here: [http://tombuildsstuff.mit-license.org/](http://tombuildsstuff.mit-license.org/)
